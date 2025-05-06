@@ -3,35 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人网站</title>
+    <title>Jianhao RUAN - Personal Page</title>
     <style>
         body {
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: 'Arial', sans-serif; /* 更换为更常见的无衬线字体 */
+            line-height: 1.6;
             margin: 0;
-            background-color: #f0f0f0;
+            padding: 0;
+            background-color: #f4f4f4;
             color: #333;
         }
         .container {
-            text-align: center;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
             padding: 20px;
             background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        h1 {
-            color: #007bff;
+        header {
+            background: #333; /* 深色头部背景 */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: #007bff 3px solid; /* 蓝色强调线 */
+            margin-bottom: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9; /* 轻微背景区分 */
+            border-left: 5px solid #007bff; /* 左侧强调线 */
+            border-radius: 5px;
+        }
+        .section h2 {
+            color: #007bff; /* 标题蓝色 */
+            margin-top: 0;
+        }
+        .profile-pic {
+            display: block;
+            margin: 0 auto 20px auto; /* 居中，下方留白 */
+            width: 150px; /* 可调整大小 */
+            height: 150px; /* 可调整大小 */
+            border-radius: 50%; /* 圆形头像 */
+            object-fit: cover; /* 确保图片不变形 */
+            border: 3px solid #007bff; /* 蓝色边框 */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #777;
+            font-size: 0.9em;
+        }
+        /* 响应式设计 */
+        @media(max-width: 768px){
+            .container {
+                width: 95%;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Jianhao RUAN</h1>
+        <p>Undergraduate Student, HKUST(GZ)</p>
+    </header>
+
     <div class="container">
-        <h1>欢迎来到我的个人网站！</h1>
-        <p>这里是 Aurorra1123 的个人主页。</p>
-        <p>网站正在建设中...</p>
+        <!-- 如果您有头像图片，可以取消下面的注释并替换 src -->
+        <img src="profile.jpg" alt="Jianhao RUAN" class="profile-pic">
+
+        <div class="section" id="about">
+            <h2>关于我 (About Me)</h2>
+            <p>我目前是香港科技大学（广州）的一名本科生。</p>
+            <!-- 您可以在这里添加更详细的个人简介 -->
+        </div>
+
+        <div class="section" id="research">
+            <h2>研究方向 (Research Interests)</h2>
+            <p>我的主要研究兴趣集中在<strong>大型语言模型 (Large Language Models - LLM)</strong> 领域。</p>
+            <!-- 您可以在这里扩展您的研究方向描述 -->
+        </div>
+
+        <div class="section" id="contact">
+            <h2>联系方式 (Contact)</h2>
+            <p><strong>邮箱 (Email):</strong> <a href="mailto:jruan189@connect.hkust-gz.edu.cn">jruan189@connect.hkust-gz.edu.cn</a></p>
+            <!-- 您可以在这里添加其他联系方式或链接，例如 GitHub, LinkedIn 等 -->
+            <!--
+            <p><strong>GitHub:</strong> <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">github.com/YOUR_GITHUB_USERNAME</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/YOUR_LINKEDIN_PROFILE" target="_blank">LinkedIn Profile</a></p>
+            -->
+        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Jianhao RUAN. All rights reserved.</p>
+    </footer>
 </body>
 </html> 
