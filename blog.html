@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Jianhao RUAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #1d1d1f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .top-nav {
+            width: 100%;
+            background-color: #ffffff;
+            padding: 0 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            height: 55px;
+        }
+        .top-nav-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            max-width: 1100px;
+            width: 100%;
+            height: 100%;
+        }
+        .top-nav a {
+            color: #333333;
+            text-decoration: none;
+            padding: 0 18px;
+            line-height: 55px;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .top-nav a:hover, .top-nav a.active {
+            background-color: #e9ecef;
+            color: #0071e3;
+        }
+        .page-content-wrapper {
+            max-width: 1100px;
+            width: calc(100% - 40px);
+            margin-top: 85px; /* Account for fixed top-nav height + some space */
+            margin-bottom: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            padding: 30px 40px;
+        }
+        .blog-post-item {
+            padding: 20px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .blog-post-item:last-child {
+            border-bottom: none;
+        }
+        .blog-post-item h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 1.4em;
+            color: #1d1d1f;
+        }
+        .blog-post-item .post-meta {
+            font-size: 0.85em;
+            color: #6e6e73;
+            margin-bottom: 10px;
+        }
+        .blog-post-item .post-excerpt {
+            font-size: 0.95em;
+            color: #333333;
+            margin-bottom: 15px;
+        }
+        .blog-post-item .read-more-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            color: #0071e3;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+        .blog-post-item .read-more-btn:hover {
+            background-color: #f8f9fa;
+            border-color: #adb5bd;
+        }
+        h1.page-title {
+            font-size: 2em;
+            color: #1d1d1f;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #0071e3;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-content-wrapper {
+                width: calc(100% - 20px);
+                padding: 20px;
+                margin-top: 75px;
+            }
+            .blog-post-item h3 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="top-nav-container">
+            <a href="index.html">Homepage</a>
+            <a href="blog.html" class="active">My Blogs</a> 
+        </div>
+    </nav>
+
+    <div class="page-content-wrapper">
+        <h1 class="page-title">Blog Posts</h1>
+
+        <article class="blog-post-item">
+            <h3><a href="#post1-placeholder" style="color:inherit; text-decoration:none;">Placeholder Blog Post Title 1</a></h3>
+            <p class="post-meta">Published on <span class="date">October 26, 2024</span> by Jianhao RUAN</p>
+            <p class="post-excerpt">
+                This is a short placeholder excerpt for the first blog post. It gives a brief idea of what the post might be about. We can elaborate more when actual content is ready. For now, this serves as a structural placeholder...
+            </p>
+            <a href="#post1-placeholder" class="read-more-btn">Read more →</a>
+        </article>
+
+        <article class="blog-post-item">
+            <h3><a href="#post2-placeholder" style="color:inherit; text-decoration:none;">Understanding Placeholder Mechanics</a></h3>
+            <p class="post-meta">Published on <span class="date">October 20, 2024</span> by Jianhao RUAN</p>
+            <p class="post-excerpt">
+                The art and science of using placeholders effectively in web design and development. This post delves into how they help in visualizing the final product and ensuring a smooth workflow. More content will follow soon...
+            </p>
+            <a href="#post2-placeholder" class="read-more-btn">Read more →</a>
+        </article>
+
+        <article class="blog-post-item">
+            <h3><a href="#post3-placeholder" style="color:inherit; text-decoration:none;">A Deep Dive into Placeholder Aesthetics</a></h3>
+            <p class="post-meta">Published on <span class="date">October 15, 2024</span> by Jianhao RUAN</p>
+            <p class="post-excerpt">
+                Exploring the visual appeal of well-crafted placeholders. Can a placeholder be a work of art? This article discusses various approaches to creating placeholders that are not only functional but also visually engaging...
+            </p>
+            <a href="#post3-placeholder" class="read-more-btn">Read more →</a>
+        </article>
+
+        <article class="blog-post-item">
+            <h3><a href="#post4-placeholder" style="color:inherit; text-decoration:none;">The Future of Placeholders in AI-Generated Content</a></h3>
+            <p class="post-meta">Published on <span class="date">October 10, 2024</span> by Jianhao RUAN</p>
+            <p class="post-excerpt">
+                As AI continues to evolve, how will the role of placeholders change? This post speculates on the future landscape where AI might generate not just content, but also sophisticated, context-aware placeholders...
+            </p>
+            <a href="#post4-placeholder" class="read-more-btn">Read more →</a>
+        </article>
+
+        <!-- Add more blog post items here as needed -->
+
+    </div>
+
+</body>
+</html> 

@@ -1,135 +1,430 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jianhao RUAN - Personal Page</title>
+    <title>Jianhao RUAN - HKUST(GZ)</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif; /* 更换为更常见的无衬线字体 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #f0f2f5; /* Overall light gray background for the page */
+            color: #1d1d1f; /* Default dark text color for the page */
+            display: flex;
+            flex-direction: column; /* For top nav and page wrapper */
+            align-items: center; /* Center page wrapper */
+            min-height: 100vh;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-top: 30px;
-            border-radius: 8px;
+
+        .top-nav {
+            width: 100%;
+            background-color: #ffffff; /* White background for top-nav */
+            padding: 0 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Softer shadow for light nav */
+            display: flex;
+            justify-content: center; /* Center nav items container */
+            position: fixed; /* Fixed top navigation */
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            height: 55px; /* Slightly increased height for better presence */
         }
-        header {
-            background: #333; /* 深色头部背景 */
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: #007bff 3px solid; /* 蓝色强调线 */
-            margin-bottom: 20px;
+        .top-nav-container {
+            display: flex;
+            justify-content: flex-start; /* Align items to the left */
+            align-items: center;
+            max-width: 1100px; /* Align with page-wrapper max-width */
+            width: 100%;
+            height: 100%;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            margin: 5px 0 0;
-            font-size: 1.2em;
-        }
-        nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        nav a {
-            color: #333;
+        .top-nav a {
+            color: #333333; /* Dark gray for nav links */
             text-decoration: none;
-            padding: 5px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            padding: 0 18px; /* Adjusted padding for height centering */
+            line-height: 55px; /* Center text vertically */
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
-        nav a:hover {
-            background-color: #007bff;
-            color: #fff;
+        .top-nav a:hover, .top-nav a.active {
+            background-color: #e9ecef; /* Light gray background for hover/active */
+            color: #0071e3; /* Blue text color for hover/active */
         }
-        .section {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #f9f9f9; /* 轻微背景区分 */
-            border-left: 5px solid #007bff; /* 左侧强调线 */
-            border-radius: 5px;
+
+        .page-wrapper {
+            display: flex;
+            flex-direction: row; 
+            max-width: 1100px; 
+            width: calc(100% - 40px); 
+            margin-top: 85px; /* Account for new top-nav height + some space */
+            margin-bottom: 30px;
+            background-color: #ffffff; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Adjusted shadow for light theme */
+            border-radius: 8px; /* Standardized border-radius */
+            overflow: hidden; 
+            color: #1d1d1f; 
         }
-        .section h2 {
-            color: #007bff; /* 标题蓝色 */
-            margin-top: 0;
+
+        .sidebar {
+            width: 280px; 
+            background-color: #f8f9fa; /* Sidebar slightly different light gray */
+            padding: 30px 25px;
+            border-right: 1px solid #dee2e6; /* Standard light border */
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
         }
+
         .profile-pic {
-            display: block;
-            margin: 0 auto 20px auto; /* 居中，下方留白 */
-            width: 150px; /* 可调整大小 */
-            height: 150px; /* 可调整大小 */
-            border-radius: 50%; /* 圆形头像 */
-            object-fit: cover; /* 确保图片不变形 */
-            border: 3px solid #007bff; /* 蓝色边框 */
+            width: 160px; 
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #0071e3; 
         }
-        footer {
+
+        .sidebar h1 {
+            font-size: 1.6em;
+            margin-bottom: 5px;
+            color: #1d1d1f;
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            color: #777;
-            font-size: 0.9em;
+            font-weight: 600; 
         }
-        /* 响应式设计 */
-        @media(max-width: 768px){
-            .container {
-                width: 95%;
+
+        .sidebar .affiliation {
+            font-size: 0.9em; 
+            color: #4a4a4f; 
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .contact-info p {
+            font-size: 0.88em;
+            margin: 12px 0;
+            color: #333;
+            display: flex; /* For icon and text alignment */
+            align-items: center;
+            word-break: break-all; 
+        }
+        .contact-info p strong { /* Remove strong for a cleaner look if icons are present */
+            /* color: #0071e3; */ 
+            /* font-weight: 500; */
+            display: none; /* Hide if using icons mainly */
+        }
+        .contact-info a {
+            color: #1d1d1f; /* Darker link color for contacts, less blue */ 
+            text-decoration: none;
+            margin-left: 8px; /* Space between icon and link text */
+        }
+        .contact-info a:hover {
+            color: #0071e3; /* Blue on hover for interactivity */
+            text-decoration: underline;
+        }
+        .contact-info i { 
+            margin-right: 8px; /* Keep margin-right for icon if strong is hidden */
+            color: #495057; /* Slightly more prominent icon color on light sidebar */
+            width: 18px; 
+            text-align: center;
+            font-size: 1.1em; /* Slightly larger icons */
+        }
+
+        .main-content {
+            flex: 1; 
+            padding: 30px 40px; 
+            overflow-y: auto; 
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eaeaea; 
+        }
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .section h2 {
+            font-size: 1.5em; /* Adjusted size */
+            color: #1d1d1f; 
+            margin-top: 0;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            /* border-bottom: 2px solid #0071e3; */ /* Removing border for emoji style */
+            display: flex; /* For emoji and text alignment */
+            align-items: center;
+            font-weight: 600;
+        }
+        .section h2 .emoji-icon {
+            margin-right: 10px;
+            font-size: 1.2em; /* Adjust emoji size if needed */
+        }
+
+        .section p, .section ul {
+            font-size: 0.95em;
+            color: #333333; 
+            line-height: 1.7; 
+        }
+        .section ul {
+            list-style-position: outside;
+            padding-left: 25px;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+        }
+        .section .news-item, .section .publication-item, .section .award-item, .section .education-item, .section .project-item, .section .skill-item {
+            margin-bottom: 15px;
+        }
+        .date {
+            font-style: normal; 
+            color: #6e6e73; 
+            font-size: 0.85em;
+            font-weight: 500;
+            display: block; /* Make date a block for spacing if needed */
+            margin-bottom: 5px; /* Space below date in cards */
+        }
+        
+        /* Blog Post Cards Styling */
+        .blog-posts-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; 
+        }
+        .blog-card {
+            flex: 1; 
+            min-width: 260px; 
+            background-color: #ffffff; /* White background for cards on light theme */
+            padding: 20px;
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+            border: 1px solid #e9ecef; /* Add subtle border to cards */
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card h4 {
+            font-size: 1.1em;
+            color: #1d1d1f;
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .blog-card .card-description {
+            font-size: 0.9em;
+            color: #333333;
+            line-height: 1.6;
+            flex-grow: 1; 
+            margin-bottom: 15px;
+        }
+        .blog-card .read-more-link {
+            font-size: 0.9em;
+            color: #0071e3;
+            text-decoration: none;
+            font-weight: 500;
+            align-self: flex-start; 
+        }
+        .blog-card .read-more-link:hover {
+            text-decoration: underline;
+        }
+
+        .view-all-posts-btn {
+            display: inline-block; 
+            padding: 10px 20px;
+            border: 1px solid #ced4da; /* Standard border color */
+            border-radius: 6px;
+            color: #1d1d1f; 
+            background-color: #ffffff; /* White background for button */
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+        .view-all-posts-btn:hover {
+            background-color: #f8f9fa;
+            border-color: #adb5bd;
+        }
+        .view-all-container {
+            text-align: center;
+            margin-top: 25px;
+        }
+        
+        /* Responsive Design (Keep existing, might need tweaks later) */
+        @media (max-width: 992px) { 
+            .page-wrapper {
+                flex-direction: column;
+                margin-top: 75px; /* Adjust for nav height */
+                border-radius: 0;
+                width: 100%;
+                box-shadow: none; /* Remove shadow on mobile for cleaner look */
             }
-            header h1 {
-                font-size: 2em;
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #dee2e6;
+                padding: 25px;
             }
-            header p {
-                font-size: 1em;
+            .profile-pic {
+                width: 140px;
+                height: 140px;
+            }
+            .main-content {
+                padding: 25px;
+            }
+            .blog-card {
+                min-width: calc(50% - 10px); 
+            }
+        }
+        @media (max-width: 767px) { 
+             .blog-card {
+                min-width: calc(100% - 0px); 
+            }
+        }
+        @media (max-width: 576px) { 
+            .top-nav a {
+                padding: 0 10px;
+                line-height: 55px;
+                font-size: 0.9em;
+            }
+            .sidebar h1 {
+                font-size: 1.4em;
+            }
+            .sidebar .affiliation {
+                font-size: 0.85em;
+            }
+            .section h2 {
+                font-size: 1.3em;
+            }
+            .main-content {
+                padding: 20px;
             }
         }
     </style>
+    <!-- Using Font Awesome for icons, ensure this link is up to date or use SVG/other icon library if preferred -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Jianhao RUAN</h1>
-        <p>Undergraduate Student, HKUST(GZ)</p>
-    </header>
-
-    <div class="container">
-        <!-- 如果您有头像图片，可以取消下面的注释并替换 src -->
-        <img src="profile.jpg" alt="Jianhao RUAN" class="profile-pic">
-
-        <div class="section" id="about">
-            <h2>关于我 (About Me)</h2>
-            <p>我目前是香港科技大学（广州）的一名本科生。</p>
-            <!-- 您可以在这里添加更详细的个人简介 -->
+    <nav class="top-nav">
+        <div class="top-nav-container">
+            <a href="index.html" class="active">Homepage</a>
+            <a href="blog.html">My Blogs</a> 
         </div>
+    </nav>
 
-        <div class="section" id="research">
-            <h2>研究方向 (Research Interests)</h2>
-            <p>我的主要研究兴趣集中在<strong>大型语言模型 (Large Language Models - LLM)</strong> 领域。</p>
-            <!-- 您可以在这里扩展您的研究方向描述 -->
-        </div>
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <img src="profile.jpg" alt="Jianhao RUAN" class="profile-pic">
+            <h1>Jianhao RUAN</h1>
+            <p class="affiliation">HKUST(GZ) UGStudent</p>
+            
+            <div class="contact-info">
+                <!-- Updated icons to better match the reference image style (using Font Awesome) -->
+                <p><i class="fas fa-map-marker-alt"></i> <a href="#">[Your Location, e.g., Guangzhou, China]</a></p> 
+                <p><i class="fas fa-envelope"></i> <a href="mailto:jruan189@connect.hkust-gz.edu.cn">jruan189@connect.hkust-gz.edu.cn</a></p>
+                <p><i class="fab fa-github"></i> <a href="#" target="_blank">[Your GitHub Link]</a></p>
+                <p><i class="fas fa-id-card"></i> <a href="#" target="_blank">[Your ORCID Link]</a></p> <!-- Reverted to fas fa-id-card for ORCID as Academicons is not default -->
+            </div>
+        </aside>
 
-        <div class="section" id="contact">
-            <h2>联系方式 (Contact)</h2>
-            <p><strong>邮箱 (Email):</strong> <a href="mailto:jruan189@connect.hkust-gz.edu.cn">jruan189@connect.hkust-gz.edu.cn</a></p>
-            <!-- 您可以在这里添加其他联系方式或链接，例如 GitHub, LinkedIn 等 -->
-            <!--
-            <p><strong>GitHub:</strong> <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">github.com/YOUR_GITHUB_USERNAME</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/YOUR_LINKEDIN_PROFILE" target="_blank">LinkedIn Profile</a></p>
-            -->
-        </div>
+        <main class="main-content">
+            <section id="about" class="section">
+                <h2><span class="emoji-icon">👤</span>About Me</h2> <!-- Using a generic person emoji, image has more abstract one -->
+                <p>
+                    I am currently an undergraduate student at The Hong Kong University of Science and Technology (Guangzhou).
+                    My primary research interests are focused on the field of Large Language Models (LLM).
+                </p>
+                <p><em>[Add a more detailed biography and description of your research interests here...]</em></p>
+            </section>
+
+            <section id="news" class="section">
+                <h2><span class="emoji-icon">🔥</span>News</h2>
+                <div class="news-item">
+                    <p><span class="date">[YYYY.MM]:</span> 🎉 [Enter your latest news here...]</p>
+                </div>
+                <div class="news-item">
+                    <p><span class="date">[YYYY.MM]:</span> 📢 [Another piece of latest news.]</p>
+                </div>
+                <p><em>[You can add more news items as needed.]</em></p>
+            </section>
+
+            <!-- Placeholder for Recent Blog Posts section - mimicking structure from reference -->
+            <section id="blog-posts" class="section">
+                <h2><span class="emoji-icon">📝</span>Recent Blog Posts</h2>
+                <div class="blog-posts-container">
+                    <div class="blog-card">
+                        <h4>[Blog Post Title 1]</h4>
+                        <p class="date">[May 15, 2024]</p>
+                        <p class="card-description">[Short description of the blog post. This text can be a bit longer to see how the card handles more content and how text wraps within the card itself.]</p>
+                        <a href="blog.html#post1-placeholder" class="read-more-link">Read more →</a>
+                    </div>
+                    <div class="blog-card">
+                        <h4>[Blog Post Title 2]</h4>
+                        <p class="date">[April 22, 2024]</p>
+                        <p class="card-description">[Another short description. Testing line wrapping and card height consistency when descriptions vary in length.]</p>
+                        <a href="blog.html#post2-placeholder" class="read-more-link">Read more →</a>
+                    </div>
+                    <div class="blog-card"> 
+                        <h4>[Blog Post Title 3]</h4>
+                        <p class="date">[March 18, 2024]</p>
+                        <p class="card-description">[A third blog post description to observe the flexbox behavior with multiple items, especially on different screen sizes.]</p>
+                        <a href="blog.html#post3-placeholder" class="read-more-link">Read more →</a>
+                    </div>
+                </div>
+                 <div class="view-all-container">
+                    <a href="blog.html" class="view-all-posts-btn">View all posts →</a>
+                </div>
+            </section>
+
+            <section id="publications" class="section">
+                <h2><span class="emoji-icon">📚</span>Publications & Research</h2> <!-- Changed emoji for better fit -->
+                <div class="publication-item">
+                    <p><strong>[Paper Title]</strong><br>
+                    [Author List]<br>
+                    <em>[Journal/Conference Name, Year]</em><br>
+                    <a href="#">[Link to Paper]</a> <a href="#">[Code Link]</a> <a href="#">[Project Page]</a>
+                    </p>
+                </div>
+                <p><em>[No publications yet. / For more details, please refer to my Google Scholar / DBLP page.]</em></p>
+            </section>
+
+            <section id="honors" class="section">
+                <h2><span class="emoji-icon">🎖️</span>Honors and Awards</h2>
+                <div class="award-item">
+                    <p><span class="date">[YYYY.MM]</span> <strong>[Award Name]</strong>, [Issuing Institution]</p>
+                </div>
+            </section>
+
+            <section id="education" class="section">
+                <h2><span class="emoji-icon">📖</span>Education</h2>
+                <div class="education-item">
+                    <p><strong>[Degree Name], [Major Name]</strong> ([Expected] Graduation Year)<br>
+                    The Hong Kong University of Science and Technology (Guangzhou) (HKUST(GZ))<br>
+                    <em>[Optional: Brief description...]</em>
+                    </p>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <h2><span class="emoji-icon">💻</span>Projects & Experience</h2>
+                <div class="project-item">
+                    <p><strong>[Project/Experience Name]</strong> ([Start-End Dates])<br>
+                    <em>[Your Role...]</em><br>
+                    [Briefly describe the project...]<br>
+                    <a href="#">[Project Link/Code Repository]</a>
+                    </p>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <h2><span class="emoji-icon">🛠️</span>Skills</h2>
+                <p><strong>Programming Languages:</strong> [e.g., Python, C++, Java, JavaScript, etc.]</p>
+                <p><strong>Technical Tools:</strong> [e.g., Git, Docker, Linux, LaTeX, Markdown, SQL, etc.]</p>
+            </section>
+        </main>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Jianhao RUAN. All rights reserved.</p>
-    </footer>
+    <!-- Footer section was removed in a previous step -->
+
 </body>
 </html> 
