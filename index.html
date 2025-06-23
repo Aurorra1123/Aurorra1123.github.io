@@ -4,306 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jianhao RUAN - HKUST(GZ)</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f2f5; /* Overall light gray background for the page */
-            color: #1d1d1f; /* Default dark text color for the page */
-            display: flex;
-            flex-direction: column; /* For top nav and page wrapper */
-            align-items: center; /* Center page wrapper */
-            min-height: 100vh;
-        }
-
-        .top-nav {
-            width: 100%;
-            background-color: #ffffff; /* White background for top-nav */
-            padding: 0 20px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Softer shadow for light nav */
-            display: flex;
-            justify-content: center; /* Center nav items container */
-            position: fixed; /* Fixed top navigation */
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            height: 55px; /* Slightly increased height for better presence */
-        }
-        .top-nav-container {
-            display: flex;
-            justify-content: flex-start; /* Align items to the left */
-            align-items: center;
-            max-width: 1100px; /* Align with page-wrapper max-width */
-            width: 100%;
-            height: 100%;
-        }
-        .top-nav a {
-            color: #333333; /* Dark gray for nav links */
-            text-decoration: none;
-            padding: 0 18px; /* Adjusted padding for height centering */
-            line-height: 55px; /* Center text vertically */
-            font-weight: 500;
-            font-size: 0.95em;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-        .top-nav a:hover, .top-nav a.active {
-            background-color: #e9ecef; /* Light gray background for hover/active */
-            color: #0071e3; /* Blue text color for hover/active */
-        }
-
-        .page-wrapper {
-            display: flex;
-            flex-direction: row; 
-            max-width: 1100px; 
-            width: calc(100% - 40px); 
-            margin-top: 85px; /* Account for new top-nav height + some space */
-            margin-bottom: 30px;
-            background-color: #ffffff; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Adjusted shadow for light theme */
-            border-radius: 8px; /* Standardized border-radius */
-            overflow: hidden; 
-            color: #1d1d1f; 
-        }
-
-        .sidebar {
-            width: 280px; 
-            background-color: #f8f9fa; /* Sidebar slightly different light gray */
-            padding: 30px 25px;
-            border-right: 1px solid #dee2e6; /* Standard light border */
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-        }
-
-        .profile-pic {
-            width: 160px; 
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 5px solid #0071e3; 
-        }
-
-        .sidebar h1 {
-            font-size: 1.6em;
-            margin-bottom: 5px;
-            color: #1d1d1f;
-            text-align: center;
-            font-weight: 600; 
-        }
-
-        .sidebar .affiliation {
-            font-size: 0.9em; 
-            color: #4a4a4f; 
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        .contact-info p {
-            font-size: 0.88em;
-            margin: 12px 0;
-            color: #333;
-            display: flex; /* For icon and text alignment */
-            align-items: center;
-            word-break: break-all; 
-        }
-        .contact-info p strong { /* Remove strong for a cleaner look if icons are present */
-            /* color: #0071e3; */ 
-            /* font-weight: 500; */
-            display: none; /* Hide if using icons mainly */
-        }
-        .contact-info a {
-            color: #1d1d1f; /* Darker link color for contacts, less blue */ 
-            text-decoration: none;
-            margin-left: 8px; /* Space between icon and link text */
-        }
-        .contact-info a:hover {
-            color: #0071e3; /* Blue on hover for interactivity */
-            text-decoration: underline;
-        }
-        .contact-info i { 
-            margin-right: 8px; /* Keep margin-right for icon if strong is hidden */
-            color: #495057; /* Slightly more prominent icon color on light sidebar */
-            width: 18px; 
-            text-align: center;
-            font-size: 1.1em; /* Slightly larger icons */
-        }
-
-        .main-content {
-            flex: 1; 
-            padding: 30px 40px; 
-            overflow-y: auto; 
-        }
-
-        .section {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eaeaea; 
-        }
-        .section:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-
-        .section h2 {
-            font-size: 1.5em; /* Adjusted size */
-            color: #1d1d1f; 
-            margin-top: 0;
-            margin-bottom: 18px;
-            padding-bottom: 10px;
-            /* border-bottom: 2px solid #0071e3; */ /* Removing border for emoji style */
-            display: flex; /* For emoji and text alignment */
-            align-items: center;
-            font-weight: 600;
-        }
-        .section h2 .emoji-icon {
-            margin-right: 10px;
-            font-size: 1.2em; /* Adjust emoji size if needed */
-        }
-
-        .section p, .section ul {
-            font-size: 0.95em;
-            color: #333333; 
-            line-height: 1.7; 
-        }
-        .section ul {
-            list-style-position: outside;
-            padding-left: 25px;
-        }
-        .section ul li {
-            margin-bottom: 10px;
-        }
-        .section .news-item, .section .publication-item, .section .award-item, .section .education-item, .section .project-item, .section .skill-item {
-            margin-bottom: 15px;
-        }
-
-        
-
-        .date {
-            font-style: normal; 
-            color: #6e6e73; 
-            font-size: 0.85em;
-            font-weight: 500;
-            display: block; /* Make date a block for spacing if needed */
-            margin-bottom: 5px; /* Space below date in cards */
-        }
-        
-        /* Blog Post Cards Styling */
-        .blog-posts-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px; 
-        }
-        .blog-card {
-            flex: 1; 
-            min-width: 260px; 
-            background-color: #ffffff; /* White background for cards on light theme */
-            padding: 20px;
-            border-radius: 8px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.06);
-            border: 1px solid #e9ecef; /* Add subtle border to cards */
-            display: flex;
-            flex-direction: column;
-        }
-        .blog-card h4 {
-            font-size: 1.1em;
-            color: #1d1d1f;
-            margin-top: 0;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-        .blog-card .card-description {
-            font-size: 0.9em;
-            color: #333333;
-            line-height: 1.6;
-            flex-grow: 1; 
-            margin-bottom: 15px;
-        }
-        .blog-card .read-more-link {
-            font-size: 0.9em;
-            color: #0071e3;
-            text-decoration: none;
-            font-weight: 500;
-            align-self: flex-start; 
-        }
-        .blog-card .read-more-link:hover {
-            text-decoration: underline;
-        }
-
-        .view-all-posts-btn {
-            display: inline-block; 
-            padding: 10px 20px;
-            border: 1px solid #ced4da; /* Standard border color */
-            border-radius: 6px;
-            color: #1d1d1f; 
-            background-color: #ffffff; /* White background for button */
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9em;
-            transition: background-color 0.2s ease, border-color 0.2s ease;
-        }
-        .view-all-posts-btn:hover {
-            background-color: #f8f9fa;
-            border-color: #adb5bd;
-        }
-        .view-all-container {
-            text-align: center;
-            margin-top: 25px;
-        }
-        
-        /* Responsive Design (Keep existing, might need tweaks later) */
-        @media (max-width: 992px) { 
-            .page-wrapper {
-                flex-direction: column;
-                margin-top: 75px; /* Adjust for nav height */
-                border-radius: 0;
-                width: 100%;
-                box-shadow: none; /* Remove shadow on mobile for cleaner look */
-            }
-            .sidebar {
-                width: 100%;
-                border-right: none;
-                border-bottom: 1px solid #dee2e6;
-                padding: 25px;
-            }
-            .profile-pic {
-                width: 140px;
-                height: 140px;
-            }
-            .main-content {
-                padding: 25px;
-            }
-            .blog-card {
-                min-width: calc(50% - 10px); 
-            }
-        }
-        @media (max-width: 767px) { 
-             .blog-card {
-                min-width: calc(100% - 0px); 
-            }
-        }
-        @media (max-width: 576px) { 
-            .top-nav a {
-                padding: 0 10px;
-                line-height: 55px;
-                font-size: 0.9em;
-            }
-            .sidebar h1 {
-                font-size: 1.4em;
-            }
-            .sidebar .affiliation {
-                font-size: 0.85em;
-            }
-            .section h2 {
-                font-size: 1.3em;
-            }
-            .main-content {
-                padding: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Using Font Awesome for icons, ensure this link is up to date or use SVG/other icon library if preferred -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -325,7 +26,7 @@
                 <!-- Updated icons to better match the reference image style (using Font Awesome) -->
                 <p><i class="fas fa-envelope"></i> <a href="mailto:jruan189@connect.hkust-gz.edu.cn">jruan189@connect.hkust-gz.edu.cn</a></p>
                 <p><i class="fab fa-github"></i> <a href="#" target="_blank">https://github.com/Aurorra1123</a></p>
-                <p><i class="fas fa-id-card"></i> <a href="#" target="_blank">[Your ORCID Link]</a></p> <!-- Reverted to fas fa-id-card for ORCID as Academicons is not default -->
+                <!-- <p><i class="fas fa-id-card"></i> <a href="#" target="_blank">[Your ORCID Link]</a></p> --> <!-- Reverted to fas fa-id-card for ORCID as Academicons is not default -->
                 <p><img src="assets/icons/redbook.ico" alt="小红书" style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;"> <a href="https://www.xiaohongshu.com/user/profile/5d923044000000000101ada6" target="_blank">@嗷RuaRua</a></p>
             </div>
         </aside>
@@ -357,7 +58,7 @@
             </section>
 
             <!-- Placeholder for Recent Blog Posts section - mimicking structure from reference -->
-            <section id="blog-posts" class="section">
+            <!--<section id="blog-posts" class="section">
                 <h2><span class="emoji-icon">📝</span>Recent Blog Posts</h2>
                 <div class="blog-posts-container">
                     <div class="blog-card">
@@ -382,18 +83,68 @@
                  <div class="view-all-container">
                     <a href="blog.html" class="view-all-posts-btn">View all posts →</a>
                 </div>
+            </section> -->
+
+            <section id="research" class="section">
+                <h2><span class="emoji-icon">🔬</span>Projects & Experience</h2>
+                <ul>
+                    <li>
+                        <span class="date">2025.01 - Present:</span>
+                        <strong>Independent Website System Development</strong><br>
+                        <em>Tools: Python, Flask, HTML, JavaScript</em>
+                        <ul style="margin-top: 5px;">
+                            <li>Independently developed a website system using Python and Flask for backend functionality.</li>
+                            <li>Designed and implemented frontend components using HTML and JavaScript for a user-friendly interface.</li>
+                            <li>Integrated features to enhance site performance and usability, ensuring smooth user experience.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="date">2025.04 - 2025.05:</span>
+                        <strong>Benchmarking LLMs on Reasoning-Length Cognition</strong><br>
+                        <em>Supervisor: Prof. Jiali &amp; Aochuan Chen (PhD Student)</em>
+                        <ul style="margin-top: 5px;">
+                            <li>Developed a novel benchmark to evaluate the long-context reasoning capabilities of Large Language Models.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="date">2024.09 - Present:</span>
+                        <strong>iGEM: New Media, Web Presentation, and Social Science Tasks</strong><br>
+                        <em>Tools: GitLab, WordPress, Video Editing, Photography, Field Research</em>
+                        <ul style="margin-top: 5px;">
+                            <li>Led new media and web presentation tasks, ensuring clear communication of research progress.</li>
+                            <li>Conducted field research and surveys to support the social science aspects of the project.</li>
+                            <li>Created engaging content and managed social media platforms to raise awareness of the iGEM project.</li>
+                            <li>Edited videos and took photos for project documentation and presentations.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="date">2023.09 - 2024.05:</span>
+                        <strong>RoboMaster: Autonomous Targeting Algorithm Development</strong><br>
+                        <em>Tools: Linux, Computer Vision, Bash, Python</em>
+                        <ul style="margin-top: 5px;">
+                            <li>Developed autonomous targeting systems for RoboMaster robots, improving accuracy and performance.</li>
+                            <li>Implemented vision-based algorithms for object detection and tracking, utilizing computer vision libraries.</li>
+                            <li>Configured and optimized Linux environments and tools for algorithm testing and deployment.</li>
+                            <li>Created scripts using Bash to automate tasks, contributing to improved workflow efficiency.</li>
+                            <li><a href="https://github.com/your-username/robomaster-targeting" target="_blank">[GitHub Link]</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </section>
 
-            <section id="publications" class="section">
-                <h2><span class="emoji-icon">📚</span>Publications & Research</h2> <!-- Changed emoji for better fit -->
-                <div class="publication-item">
-                    <p><strong>[Paper Title]</strong><br>
-                    [Author List]<br>
-                    <em>[Journal/Conference Name, Year]</em><br>
-                    <a href="#">[Link to Paper]</a> <a href="#">[Code Link]</a> <a href="#">[Project Page]</a>
-                    </p>
-                </div>
-                <p><em>[No publications yet. / For more details, please refer to my Google Scholar / DBLP page.]</em></p>
+            <section id="internships" class="section">
+                <h2><span class="emoji-icon">💼</span>Internships</h2>
+                <ul>
+                    <li>
+                        <span class="date">2025.02 - Present:</span>
+                        <strong>LLM-Related Research at Tech Startup</strong><br>
+                        <em>Tools: Python, Research Tools</em>
+                        <ul style="margin-top: 5px;">
+                            <li>Conducting research related to large language models (LLMs) at a tech startup.</li>
+                            <li>Collaborating with a team to explore innovative applications and improvements for LLM technology.</li>
+                        </ul>
+                    </li>
+                </ul>
             </section>
 
             <section id="honors" class="section">
@@ -401,6 +152,7 @@
                 <ul>
                     <li><span class="date">2025.05:</span> <em><strong>Third Prize</strong>, 18th "Challenge Cup" Guangdong Provincial Competition</em></li>
                     <li><span class="date">2024.10:</span> <em><strong>Gold Medal and Nomination Prize for Best New Basic Part</strong>, International Genetically Engineered Machine Competition (iGEM) - Team Leader</em></li>
+                    <li><span class="date">2024.04:</span> <em><strong>Second Prize</strong>, RoboMaster 2024 University League (Guangdong Provincial), 3v3 Match</em></li>
                     <li><span class="date">2023.09:</span> <em><strong>Freshman Scholarship</strong>, The Hong Kong University of Science and Technology (Guangzhou)</em></li>
                     <li><span class="date">2023.06:</span> <em><strong>Outstanding Graduate Award</strong>, Shenzhen Senior High School (Group) — Awarded to the top 10% of the graduating class for overall excellence throughout three years of high school.</em></li>
                 </ul>
@@ -416,14 +168,6 @@
             </section>
 
             <section id="projects" class="section">
-                <h2><span class="emoji-icon">💻</span>Projects & Experience</h2>
-                <div class="project-item">
-                    <p><strong>[Project/Experience Name]</strong> ([Start-End Dates])<br>
-                    <em>[Your Role...]</em><br>
-                    [Briefly describe the project...]<br>
-                    <a href="#">[Project Link/Code Repository]</a>
-                    </p>
-                </div>
             </section>
 
             <section id="skills" class="section">
@@ -458,8 +202,8 @@
             <section id="extracurricular-activities" class="section">
                 <h2><span class="emoji-icon">🌟</span>Extracurricular Activities</h2>
                 <ul>
-                    <li><span class="date">Sep 2024 – Present:</span> <em><strong>Member</strong>, Student Press Squad, The Hong Kong University of Science and Technology (Guangzhou)</em></li>
-                    <li><span class="date">Sep 2023 – Present:</span> <em><strong>Photographer & Team Member</strong>, Photography Society, The Hong Kong University of Science and Technology (Guangzhou)</em></li>
+                    <li><span class="date">2024.09 - Present:</span> <em><strong>Member</strong>, Student Press Squad, The Hong Kong University of Science and Technology (Guangzhou)</em></li>
+                    <li><span class="date">2023.09 - Present:</span> <em><strong>Photographer & Team Member</strong>, Photography Society, The Hong Kong University of Science and Technology (Guangzhou)</em></li>
                     <li><span class="date">2023 – Present:</span> <em><strong>Member</strong>, Varsity Basketball Team, The Hong Kong University of Science and Technology (Guangzhou)</em></li>
                     <li><span class="date">2020 – 2023:</span> <em><strong>Member</strong>, Shenzhen Senior High School Zicheng Men's Choir</em></li>
                 </ul>
