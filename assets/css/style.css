@@ -80,23 +80,23 @@ body {
 }
 
 .sidebar h1 {
-    font-size: 1.25em;
-    margin-bottom: 2px;
+    font-size: 1.6em;
+    margin-bottom: 5px;
     color: #1d1d1f;
     text-align: center;
     font-weight: 600; 
 }
 
 .sidebar .affiliation {
-    font-size: 0.92em;
+    font-size: 0.9em; 
     color: #4a4a4f; 
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     text-align: center;
 }
 
 .contact-info p {
-    margin: 7px 0;
-    font-size: 0.95em;
+    font-size: 0.88em;
+    margin: 12px 0;
     color: #333;
     display: flex; /* For icon and text alignment */
     align-items: center;
@@ -126,58 +126,61 @@ body {
 
 .main-content {
     flex: 1; 
-    padding: 24px 24px; 
+    padding: 30px 40px; 
     overflow-y: auto; 
 }
 
 .section {
-    margin-bottom: 18px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eaeaea; 
 }
 .section:last-child {
     border-bottom: none;
     margin-bottom: 0;
 }
+
 .section h2 {
-    font-size: 1.18em;
-    margin-bottom: 10px;
-    padding-bottom: 0;
-}
-.section ul {
-    margin: 0 0 0 1.2em;
-    padding-left: 1.1em;
-    list-style-type: disc;
-}
-.section ul ul {
-    margin: 0.1em 0 0.1em 1.2em;
-    padding-left: 1.1em;
-    list-style-type: circle;
-}
-.section li {
-    margin-bottom: 2px;
-    line-height: 1.45;
-    font-size: 0.98em;
-}
-.section p {
-    margin: 0 0 6px 0;
-    line-height: 1.5;
-    font-size: 0.98em;
-}
-.date {
-    color: #888;
-    font-style: italic;
-    font-size: 0.97em;
-    font-weight: 400;
-    display: inline;
-    margin-right: 0.5em;
-}
-strong {
+    font-size: 1.5em; /* Adjusted size */
+    color: #1d1d1f; 
+    margin-top: 0;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    /* border-bottom: 2px solid #0071e3; */ /* Removing border for emoji style */
+    display: flex; /* For emoji and text alignment */
+    align-items: center;
     font-weight: 600;
 }
-.section em {
-    font-style: italic;
-    color: #444;
+.section h2 .emoji-icon {
+    margin-right: 10px;
+    font-size: 1.2em; /* Adjust emoji size if needed */
+}
+
+.section p, .section ul {
+    font-size: 0.95em;
+    color: #333333; 
+    line-height: 1.7; 
+}
+.section ul {
+    list-style-position: outside;
+    padding-left: 25px;
+}
+.section ul li {
+    margin-bottom: 10px;
+}
+.section .news-item, .section .publication-item, .section .award-item, .section .education-item, .section .project-item, .section .skill-item {
+    margin-bottom: 15px;
+}
+
+
+
+.date {
+    font-style: normal; 
+    color: #6e6e73; 
+    font-size: 0.85em;
+    font-weight: 500;
+    display: block; /* Make date a block for spacing if needed */
+    margin-bottom: 5px; /* Space below date in cards */
 }
 
 /* Blog Post Cards Styling */
