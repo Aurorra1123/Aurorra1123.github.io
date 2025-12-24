@@ -4,59 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Jianhao RUAN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <nav class="top-nav">
-        <div class="top-nav-container">
-            <a href="index.html">Homepage</a>
-            <a href="blog.html" class="active">My Blogs</a> 
-        </div>
-    </nav>
+<body class="fixed-top-nav">
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a class="nav-brand" href="index.html">Jianhao RUAN</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="index.html#news">News</a></li>
+                    <li><a href="index.html#research">Projects</a></li>
+                    <li><a href="index.html#honors">Honors</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <div class="page-content-wrapper">
-        <h1 class="page-title">Blog Posts</h1>
+    <main class="container page">
+        <header class="post-header">
+            <h1 class="post-title"><span class="name-strong">Blog</span> Notes</h1>
+            <p class="post-desc">Short thoughts, project updates, and reading notes.</p>
+        </header>
 
-        <article class="blog-post-item">
-            <h3><a href="#post1-placeholder" style="color:inherit; text-decoration:none;">Placeholder Blog Post Title 1</a></h3>
-            <p class="post-meta">Published on <span class="date">October 26, 2024</span> by Jianhao RUAN</p>
-            <p class="post-excerpt">
-                This is a short placeholder excerpt for the first blog post. It gives a brief idea of what the post might be about. We can elaborate more when actual content is ready. For now, this serves as a structural placeholder...
-            </p>
-            <a href="#post1-placeholder" class="read-more-btn">Read more →</a>
-        </article>
+        <ul class="post-list">
+            <li>
+                <h3 class="post-item-title"><a href="#post1-placeholder">Placeholder Blog Post Title 1</a></h3>
+                <p class="post-meta">October 26, 2024 - Jianhao RUAN</p>
+                <p class="post-excerpt">
+                    This is a short placeholder excerpt for the first blog post. It gives a brief idea of what the post might be about. We can elaborate more when actual content is ready.
+                </p>
+                <a href="#post1-placeholder" class="post-read-more">Read more -></a>
+            </li>
 
-        <article class="blog-post-item">
-            <h3><a href="#post2-placeholder" style="color:inherit; text-decoration:none;">Understanding Placeholder Mechanics</a></h3>
-            <p class="post-meta">Published on <span class="date">October 20, 2024</span> by Jianhao RUAN</p>
-            <p class="post-excerpt">
-                The art and science of using placeholders effectively in web design and development. This post delves into how they help in visualizing the final product and ensuring a smooth workflow. More content will follow soon...
-            </p>
-            <a href="#post2-placeholder" class="read-more-btn">Read more →</a>
-        </article>
+            <li>
+                <h3 class="post-item-title"><a href="#post2-placeholder">Understanding Placeholder Mechanics</a></h3>
+                <p class="post-meta">October 20, 2024 - Jianhao RUAN</p>
+                <p class="post-excerpt">
+                    The art and science of using placeholders effectively in web design and development. This post delves into how they help in visualizing the final product and ensuring a smooth workflow.
+                </p>
+                <a href="#post2-placeholder" class="post-read-more">Read more -></a>
+            </li>
 
-        <article class="blog-post-item">
-            <h3><a href="#post3-placeholder" style="color:inherit; text-decoration:none;">A Deep Dive into Placeholder Aesthetics</a></h3>
-            <p class="post-meta">Published on <span class="date">October 15, 2024</span> by Jianhao RUAN</p>
-            <p class="post-excerpt">
-                Exploring the visual appeal of well-crafted placeholders. Can a placeholder be a work of art? This article discusses various approaches to creating placeholders that are not only functional but also visually engaging...
-            </p>
-            <a href="#post3-placeholder" class="read-more-btn">Read more →</a>
-        </article>
+            <li>
+                <h3 class="post-item-title"><a href="#post3-placeholder">A Deep Dive into Placeholder Aesthetics</a></h3>
+                <p class="post-meta">October 15, 2024 - Jianhao RUAN</p>
+                <p class="post-excerpt">
+                    Exploring the visual appeal of well-crafted placeholders. Can a placeholder be a work of art? This article discusses various approaches to creating placeholders that are not only functional but also visually engaging.
+                </p>
+                <a href="#post3-placeholder" class="post-read-more">Read more -></a>
+            </li>
 
-        <article class="blog-post-item">
-            <h3><a href="#post4-placeholder" style="color:inherit; text-decoration:none;">The Future of Placeholders in AI-Generated Content</a></h3>
-            <p class="post-meta">Published on <span class="date">October 10, 2024</span> by Jianhao RUAN</p>
-            <p class="post-excerpt">
-                As AI continues to evolve, how will the role of placeholders change? This post speculates on the future landscape where AI might generate not just content, but also sophisticated, context-aware placeholders...
-            </p>
-            <a href="#post4-placeholder" class="read-more-btn">Read more →</a>
-        </article>
+            <li>
+                <h3 class="post-item-title"><a href="#post4-placeholder">The Future of Placeholders in AI-Generated Content</a></h3>
+                <p class="post-meta">October 10, 2024 - Jianhao RUAN</p>
+                <p class="post-excerpt">
+                    As AI continues to evolve, how will the role of placeholders change? This post speculates on the future landscape where AI might generate not just content, but also sophisticated, context-aware placeholders.
+                </p>
+                <a href="#post4-placeholder" class="post-read-more">Read more -></a>
+            </li>
+        </ul>
+    </main>
 
-        <!-- Add more blog post items here as needed -->
-
-    </div>
-
+    <footer class="site-footer">
+        <div class="container">(c) 2025 Jianhao RUAN. Built with GitHub Pages.</div>
+    </footer>
 </body>
-</html> 
+</html>

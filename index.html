@@ -4,103 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jianhao RUAN - HKUST(GZ)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Using Font Awesome for icons, ensure this link is up to date or use SVG/other icon library if preferred -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <nav class="top-nav">
-        <div class="top-nav-container">
-            <a href="index.html" class="active">Homepage</a>
-            <a href="blog.html">My Blogs</a> 
-        </div>
-    </nav>
-
-    <div class="page-wrapper">
-        <aside class="sidebar">
-            <img src="assets/images/profile.jpg" alt="Jianhao RUAN" class="profile-pic">
-            <h1>Jianhao RUAN</h1>
-            <p class="affiliation">HKUST(GZ)</p>
-            
-            <div class="contact-info">
-                <!-- Updated icons to better match the reference image style (using Font Awesome) -->
-                <p><i class="fas fa-envelope"></i> <a href="mailto:jruan189@connect.hkust-gz.edu.cn">jruan189@connect.hkust-gz.edu.cn</a></p>
-                <p><i class="fab fa-github"></i> <a href="https://github.com/Aurorra1123" target="_blank">https://github.com/Aurorra1123</a></p>
-                <!-- <p><i class="fas fa-id-card"></i> <a href="#" target="_blank">[Your ORCID Link]</a></p> --> <!-- Reverted to fas fa-id-card for ORCID as Academicons is not default -->
-                <p><img src="assets/icons/redbook.ico" alt="小红书" style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;"> <a href="https://www.xiaohongshu.com/user/profile/5d923044000000000101ada6" target="_blank">@嗷RuaRua</a></p>
+<body class="fixed-top-nav">
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a class="nav-brand" href="index.html">Jianhao RUAN</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">About</a></li>
+                    <li><a href="index.html#news">News</a></li>
+                    <li><a href="index.html#research">Projects</a></li>
+                    <li><a href="index.html#honors">Honors</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
             </div>
-        </aside>
+        </nav>
+    </header>
 
-        <main class="main-content">
-            <section id="about" class="section">
-                <h2><span class="emoji-icon">👤</span>About Me</h2> <!-- Using a generic person emoji, image has more abstract one -->
+    <main class="container page">
+        <header class="post-header">
+            <h1 class="post-title"><span class="name-strong">Jianhao</span> RUAN</h1>
+            <p class="post-role">Research Engineer, MetaGPT</p>
+            <p class="post-desc">jruan189@connect.hkust-gz.edu.cn - <a href="https://www.hkust-gz.edu.cn/" target="_blank" rel="noopener">HKUST (GZ)</a></p>
+        </header>
+
+        <article class="post-body">
+            <div class="profile-card">
+                <img src="assets/images/profile.jpg" alt="Jianhao RUAN">
+                <p class="profile-caption">HKUST(GZ), Guangzhou</p>
+            </div>
+
+            <section id="About" class="section">
+                <h2 class="section-title">about</h2>
                 <p>
-                    I am currently an undergraduate student at The Hong Kong University of Science and Technology (Guangzhou).
-                    My primary research interests are focused on the field of Large Language Models (LLM). Especially, I am interested in the research of efficient reasoning of LLMs.
+                    Hi!👋 My name is Jianhao Ruan(阮建豪). I am an undergraduate in <a href="https://dsa.hkust-gz.edu.cn/" target="_blank" rel="noopener">DSA Thrust</a> at <a href="https://www.hkust-gz.edu.cn/" target="_blank" rel="noopener">HKUST (GZ)</a>. From May to Nov 2025, I interned at the
+                    <a href="https://github.com/DSAILatHKUST" target="_blank" rel="noopener">DSAIL Lab</a> under Prof.
+                    <a href="https://sites.google.com/view/lijia" target="_blank" rel="noopener">Lijia</a>, focusing on
+                    <a href="assets/files/8673_Exposing_Weaknesses_of_La.pdf" target="_blank" rel="noopener">LLMs and graph algorithms</a>.
+                    Since Sep 2025, I have been a Research Engineer intern with the
+                    <a href="https://www.deepwisdom.ai/" target="_blank" rel="noopener">MetaGPT</a> team, supervised by PhD student
+                    <a href="https://scholar.google.com/citations?user=VATBrqgAAAAJ&hl=zh-CN" target="_blank" rel="noopener">Jiayi Zhang</a>,
+                    working on multi-agent systems and reinforcement learning.
+                </p>
+                <p>I will be an exchange student at <a href="https://www.uclaextension.edu/" target="_blank" rel="noopener">UCLA</a> from Jan to Mar 2026.</p>
+                <p><strong>I am actively looking for 2027 fall PhD positions and industry internship collaborations. Feel free to <a href="mailto:jruan189@connect.hkust-gz.edu.cn">email me</a> if you are interested.</strong></p>
+                <p>
+                    My research interests include multi-agent systems (MAS), agentic LLM architectures, learning and memory systems, and reinforcement learning and reward design.
                 </p>
             </section>
 
-            <section id="news" class="section">
-                <h2><span class="emoji-icon">🔥</span>News</h2>
-                
-                <div class="news-item">
-                    <p><span class="date">2025.07:</span> 📢 Led team project to National Finals(Top 1.5%~) in National Undergraduate Electronics Design Contest.</p>
-                </div>
-                <div class="news-item">
-                    <p><span class="date">2025.06:</span> 📢 Join in the GraphMind multi-agent system development and design project in the HKUST(GZ) Startup Bridge program</p>
-                </div>
-                <div class="news-item">
-                    <p><span class="date">2025.06:</span> 📢 Join the X program of HKUST(GZ) with Prof. Jiali about Reasoning LLMs</p>
-                </div>
-                <div class="news-item">
-                    <p><span class="date">2025.05:</span> 🏆 Won Third Prize in the 18th "Challenge Cup" Guangdong Provincial Competition</p>
-                </div>
-                <div class="news-item">
-                    <p><span class="date">2025.05:</span> 📢 Appointed as Senate Member of HKUST(GZ)</p>
-                </div>
-                <div class="news-item">
-                    <p><span class="date">2024.10:</span> 🎉 Achieved Gold Medal and Nomination Prize for Best New Basic Part at iGEM 2024 as Team Leader</p>
-                </div>
-                <div class="news-item">
-                    <p><span class="date">2023.10:</span> 🏠 Started serving as Community Leader at Residential College of HKUST(GZ)</p>
+            <section id="news" class="section section-clear">
+                <h2 class="section-title">news</h2>
+                <div class="news-table">
+                    <div class="news-row">
+                        <div class="news-date">2025.07</div>
+                        <p class="news-text">Led team project to National Finals (Top 1.5%~) in National Undergraduate Electronics Design Contest.</p>
+                    </div>
+                    <div class="news-row">
+                        <div class="news-date">2025.06</div>
+                        <p class="news-text">Join in the GraphMind multi-agent system development and design project in the HKUST(GZ) Startup Bridge program.</p>
+                    </div>
+                    <div class="news-row">
+                        <div class="news-date">2025.06</div>
+                        <p class="news-text">Join the X program of HKUST(GZ) with Prof. Jiali about Reasoning LLMs.</p>
+                    </div>
+                    <div class="news-row">
+                        <div class="news-date">2025.05</div>
+                        <p class="news-text">Won Third Prize in the 18th "Challenge Cup" Guangdong Provincial Competition.</p>
+                    </div>
+                    <div class="news-row">
+                        <div class="news-date">2025.05</div>
+                        <p class="news-text">Appointed as <a href="assets/files/Jianhao%20RUAN_Senate.pdf" target="_blank" rel="noopener">Senate Member</a> of HKUST(GZ).</p>
+                    </div>
+                    <div class="news-row">
+                        <div class="news-date">2024.10</div>
+                        <p class="news-text">Achieved Gold Medal and Nomination Prize for Best New Basic Part at iGEM 2024 as Team Leader.</p>
+                    </div>
+                    <div class="news-row">
+                        <div class="news-date">2023.10</div>
+                        <p class="news-text">Started serving as Community Leader at Residential College of HKUST(GZ).</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- Placeholder for Recent Blog Posts section - mimicking structure from reference -->
-            <!--<section id="blog-posts" class="section">
-                <h2><span class="emoji-icon">📝</span>Recent Blog Posts</h2>
-                <div class="blog-posts-container">
-                    <div class="blog-card">
-                        <h4>[Blog Post Title 1]</h4>
-                        <p class="date">[May 15, 2024]</p>
-                        <p class="card-description">[Short description of the blog post. This text can be a bit longer to see how the card handles more content and how text wraps within the card itself.]</p>
-                        <a href="blog.html#post1-placeholder" class="read-more-link">Read more →</a>
-                    </div>
-                    <div class="blog-card">
-                        <h4>[Blog Post Title 2]</h4>
-                        <p class="date">[April 22, 2024]</p>
-                        <p class="card-description">[Another short description. Testing line wrapping and card height consistency when descriptions vary in length.]</p>
-                        <a href="blog.html#post2-placeholder" class="read-more-link">Read more →</a>
-                    </div>
-                    <div class="blog-card"> 
-                        <h4>[Blog Post Title 3]</h4>
-                        <p class="date">[March 18, 2024]</p>
-                        <p class="card-description">[A third blog post description to observe the flexbox behavior with multiple items, especially on different screen sizes.]</p>
-                        <a href="blog.html#post3-placeholder" class="read-more-link">Read more →</a>
-                    </div>
-                </div>
-                 <div class="view-all-container">
-                    <a href="blog.html" class="view-all-posts-btn">View all posts →</a>
-                </div>
-            </section> -->
-
             <section id="research" class="section">
-                <h2><span class="emoji-icon">🔬</span>Projects & Experience</h2>
-                <ul>
+                <h2 class="section-title">projects &amp; experience</h2>
+                <ul class="item-list">
                     <li>
                         <span class="date">2025.05 - Present:</span>
                         <strong>GLC: Graph-based Long-Context Reasoning</strong>
-                        <ul style="margin-top: 5px;">
+                        <ul class="detail-list">
                             <li>Developed a novel benchmark to evaluate the long-context reasoning capabilities of Large Language Models.</li>
                         </ul>
                     </li>
@@ -108,7 +107,7 @@
                         <span class="date">2025.01 - Present:</span>
                         <strong>Independent Website System Development</strong><br>
                         <em>Tools: Python, Flask, HTML, JavaScript</em>
-                        <ul style="margin-top: 5px;">
+                        <ul class="detail-list">
                             <li>Independently developed a website system using Python and Flask for backend functionality.</li>
                             <li>Designed and implemented frontend components using HTML and JavaScript for a user-friendly interface.</li>
                             <li>Integrated features to enhance site performance and usability, ensuring smooth user experience.</li>
@@ -118,7 +117,7 @@
                         <span class="date">2025.04 - 2025.05:</span>
                         <strong>Benchmarking LLMs on Reasoning-Length Cognition</strong><br>
                         <em>Supervisor: Prof. Jiali &amp; Aochuan Chen (PhD Student)</em>
-                        <ul style="margin-top: 5px;">
+                        <ul class="detail-list">
                             <li>Developed a novel benchmark to evaluate the long-context reasoning capabilities of Large Language Models.</li>
                         </ul>
                     </li>
@@ -126,7 +125,7 @@
                         <span class="date">2024.09 - Present:</span>
                         <strong>iGEM: New Media, Web Presentation, and Social Science Tasks</strong><br>
                         <em>Tools: GitLab, WordPress, Video Editing, Photography, Field Research</em>
-                        <ul style="margin-top: 5px;">
+                        <ul class="detail-list">
                             <li>Led new media and web presentation tasks, ensuring clear communication of research progress.</li>
                             <li>Conducted field research and surveys to support the social science aspects of the project.</li>
                             <li>Created engaging content and managed social media platforms to raise awareness of the iGEM project.</li>
@@ -137,25 +136,25 @@
                         <span class="date">2023.09 - 2024.05:</span>
                         <strong>RoboMaster: Autonomous Targeting Algorithm Development</strong><br>
                         <em>Tools: Linux, Computer Vision, Bash, Python</em>
-                        <ul style="margin-top: 5px;">
+                        <ul class="detail-list">
                             <li>Developed autonomous targeting systems for RoboMaster robots, improving accuracy and performance.</li>
                             <li>Implemented vision-based algorithms for object detection and tracking, utilizing computer vision libraries.</li>
                             <li>Configured and optimized Linux environments and tools for algorithm testing and deployment.</li>
                             <li>Created scripts using Bash to automate tasks, contributing to improved workflow efficiency.</li>
-                            <li><a href="https://github.com/your-username/robomaster-targeting" target="_blank">[GitHub Link]</a></li>
+                            <li><a href="https://github.com/your-username/robomaster-targeting" target="_blank" rel="noopener">[GitHub Link]</a></li>
                         </ul>
                     </li>
                 </ul>
             </section>
 
             <section id="internships" class="section">
-                <h2><span class="emoji-icon">💼</span>Internships</h2>
-                <ul>
+                <h2 class="section-title">internships</h2>
+                <ul class="item-list">
                     <li>
                         <span class="date">2025.02 - Present:</span>
                         <strong>LLM-Related Research at Tech Startup</strong><br>
                         <em>Tools: Python, Research Tools</em>
-                        <ul style="margin-top: 5px;">
+                        <ul class="detail-list">
                             <li>Conducting research related to large language models (LLMs) at a tech startup.</li>
                             <li>Collaborating with a team to explore innovative applications and improvements for LLM technology.</li>
                         </ul>
@@ -164,71 +163,77 @@
             </section>
 
             <section id="honors" class="section">
-                <h2><span class="emoji-icon">🎖️</span>Honors and Awards</h2>
-                <ul>
+                <h2 class="section-title">honors and awards</h2>
+                <ul class="item-list">
                     <li><span class="date">2025.05:</span> <em><strong>Third Prize</strong>, 18th "Challenge Cup" Guangdong Provincial Competition</em></li>
                     <li><span class="date">2024.10:</span> <em><strong>Gold Medal and Nomination Prize for Best New Basic Part</strong>, International Genetically Engineered Machine Competition (iGEM) - Team Leader</em></li>
                     <li><span class="date">2024.04:</span> <em><strong>Second Prize</strong>, RoboMaster 2024 University League (Guangdong Provincial), 3v3 Match</em></li>
                     <li><span class="date">2023.09:</span> <em><strong>Freshman Scholarship</strong>, The Hong Kong University of Science and Technology (Guangzhou)</em></li>
-                    <li><span class="date">2023.06:</span> <em><strong>Outstanding Graduate Award</strong>, Shenzhen Senior High School (Group) — Awarded to the top 10% of the graduating class for overall excellence throughout three years of high school.</em></li>
+                    <li><span class="date">2023.06:</span> <em><strong>Outstanding Graduate Award</strong>, Shenzhen Senior High School (Group) - Awarded to the top 10% of the graduating class for overall excellence throughout three years of high school.</em></li>
                 </ul>
             </section>
 
             <section id="education" class="section">
-                <h2><span class="emoji-icon">📖</span>Education</h2>
-                <ul>
+                <h2 class="section-title">education</h2>
+                <ul class="item-list">
                     <li><span class="date">2023.09 - 2027.06 (Expected):</span> <em><strong>BSc in HKUST(GZ)</strong>, The Hong Kong University of Science and Technology (Guangzhou)</em></li>
                     <li><span class="date">2020.09 - 2023.06:</span> <em><strong>High School</strong>, Shenzhen Senior High School</em></li>
                     <li><span class="date">2017.09 - 2020.06:</span> <em><strong>Middle School</strong>, Shenzhen Senior High School</em></li>
                 </ul>
             </section>
 
-            <section id="projects" class="section">
-            </section>
-
             <section id="skills" class="section">
-                <h2><span class="emoji-icon">🛠️</span>Skills</h2>
+                <h2 class="section-title">skills</h2>
                 <p><strong>Programming Languages:</strong> Python (PyTorch, scikit-learn, pandas, numpy, matplotlib), C++</p>
                 <p><strong>Technical Tools:</strong> Bash, Git, Vim, LaTeX, Markdown</p>
                 <p><strong>Languages:</strong> English (fluent), Chinese (native)</p>
             </section>
 
             <section id="leadership" class="section">
-                <h2><span class="emoji-icon">💬</span>Leadership & Service</h2>
-                <ul class="leadership-list">
+                <h2 class="section-title">leadership &amp; service</h2>
+                <ul class="item-list">
                     <li>
-                        <span class="date">2025.07 - Present:</span> 
-                        <strong>Senate Member</strong>, The Senate of HKUST(GZ)
+                        <span class="date">2025.07 - Present:</span>
+                        <strong><a href="assets/files/Jianhao%20RUAN_Senate.pdf" target="_blank" rel="noopener">Senate Member</a></strong>, The Senate of HKUST(GZ)
                     </li>
                     <li>
-                        <span class="date">2023.10 - 2024.06:</span> 
+                        <span class="date">2023.10 - 2024.06:</span>
                         <strong>Community Leader</strong>, Residential College of HKUST(GZ)
                     </li>
                     <li>
-                        <span class="date">2021.09 - 2022.06:</span> 
+                        <span class="date">2021.09 - 2022.06:</span>
                         <strong>Vice President</strong>, Student Union, Shenzhen Senior High School (Group)
-                        <!-- <ul style="margin-top: 8px; margin-bottom: 0;">
-                            <li><em>Successfully co-led the planning and execution of the annual school-wide Arts Festival, engaging over 2,000 students and staff.</em></li>
-                            <li><em>Managed a team of 15 student officers, delegating tasks for various projects and ensuring effective collaboration.</em></li>
-                        </ul> -->
                     </li>
                 </ul>
             </section>
 
             <section id="extracurricular-activities" class="section">
-                <h2><span class="emoji-icon">🌟</span>Extracurricular Activities</h2>
-                <ul>
+                <h2 class="section-title">extracurricular activities</h2>
+                <ul class="item-list">
                     <li><span class="date">2024.09 - Present:</span> <em><strong>Member</strong>, Student Press Squad, The Hong Kong University of Science and Technology (Guangzhou)</em></li>
-                    <li><span class="date">2023.09 - Present:</span> <em><strong>Photographer & Team Member</strong>, Photography Society, The Hong Kong University of Science and Technology (Guangzhou)</em></li>
-                    <li><span class="date">2023 – Present:</span> <em><strong>Member</strong>, Varsity Basketball Team, The Hong Kong University of Science and Technology (Guangzhou)</em></li>
-                    <li><span class="date">2020 – 2023:</span> <em><strong>Member</strong>, Shenzhen Senior High School Zicheng Men's Choir</em></li>
+                    <li><span class="date">2023.09 - Present:</span> <em><strong>Photographer &amp; Team Member</strong>, Photography Society, The Hong Kong University of Science and Technology (Guangzhou)</em></li>
+                    <li><span class="date">2023 - Present:</span> <em><strong>Member</strong>, Varsity Basketball Team, The Hong Kong University of Science and Technology (Guangzhou)</em></li>
+                    <li><span class="date">2020 - 2023:</span> <em><strong>Member</strong>, Shenzhen Senior High School Zicheng Men's Choir</em></li>
                 </ul>
                 <p><strong>Hobbies:</strong> Reading, Traveling, Photography, Music</p>
             </section>
-        </main>
-    </div>
 
-    <!-- Footer section was removed in a previous step -->
+            <section id="contact" class="section">
+                <h2 class="section-title">contact</h2>
+                <div class="contact-icons">
+                    <a href="mailto:jruan189@connect.hkust-gz.edu.cn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://github.com/Aurorra1123" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.xiaohongshu.com/user/profile/5d923044000000000101ada6" target="_blank" rel="noopener" aria-label="Xiaohongshu">
+                        <img src="assets/icons/redbook.ico" alt="Xiaohongshu">
+                    </a>
+                </div>
+                <p class="contact-note">Best way to reach me: email for research, GitHub for code.</p>
+            </section>
+        </article>
+    </main>
 
+    <footer class="site-footer">
+        <div class="container">(c) 2025 Jianhao RUAN. Built with GitHub Pages.</div>
+    </footer>
 </body>
-</html> 
+</html>
