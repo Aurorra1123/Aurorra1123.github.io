@@ -336,9 +336,8 @@ a:hover {
 .news-row {
   display: grid;
   grid-template-columns: 120px 1fr;
-  gap: 1rem;
-  padding: 0.4rem 0;
-  border-bottom: 1px dashed var(--divider-color);
+  gap: 0.5rem;
+  padding: 0.05rem 0;
 }
 
 .news-row:last-child {
